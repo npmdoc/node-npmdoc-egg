@@ -1,0 +1,1705 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/eggjs/egg"
+
+    >egg (v1.1.0)</a>
+</h1>
+<h4>A web framework's framework for Node.js</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.egg">module egg</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.egg">
+            function <span class="apidocSignatureSpan"></span>egg
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.Agent">
+            function <span class="apidocSignatureSpan">egg.</span>Agent
+            <span class="apidocSignatureSpan">(options = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.AgentWorkerLoader">
+            function <span class="apidocSignatureSpan">egg.</span>AgentWorkerLoader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.AppWorkerLoader">
+            function <span class="apidocSignatureSpan">egg.</span>AppWorkerLoader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.Application">
+            function <span class="apidocSignatureSpan">egg.</span>Application
+            <span class="apidocSignatureSpan">(options = {})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.Controller">
+            function <span class="apidocSignatureSpan">egg.</span>Controller
+            <span class="apidocSignatureSpan">(ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.Service">
+            function <span class="apidocSignatureSpan">egg.</span>Service
+            <span class="apidocSignatureSpan">(ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.config_default">
+            function <span class="apidocSignatureSpan">egg.</span>config_default
+            <span class="apidocSignatureSpan">(appInfo.baseDir, &#x27;run&#x27;)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.startCluster">
+            function <span class="apidocSignatureSpan">egg.</span>startCluster
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.egg.Agent">module egg.Agent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.Agent.Agent">
+            function <span class="apidocSignatureSpan">egg.</span>Agent
+            <span class="apidocSignatureSpan">(options = {})</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.egg.AgentWorkerLoader">module egg.AgentWorkerLoader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.AgentWorkerLoader.AgentWorkerLoader">
+            function <span class="apidocSignatureSpan">egg.</span>AgentWorkerLoader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.egg.AppWorkerLoader">module egg.AppWorkerLoader</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.AppWorkerLoader.AppWorkerLoader">
+            function <span class="apidocSignatureSpan">egg.</span>AppWorkerLoader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.egg.Application">module egg.Application</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.Application.Application">
+            function <span class="apidocSignatureSpan">egg.</span>Application
+            <span class="apidocSignatureSpan">(options = {})</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.egg.Controller">module egg.Controller</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.Controller.Controller">
+            function <span class="apidocSignatureSpan">egg.</span>Controller
+            <span class="apidocSignatureSpan">(ctx)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.egg.config_default">module egg.config_default</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.config_default.config_default">
+            function <span class="apidocSignatureSpan">egg.</span>config_default
+            <span class="apidocSignatureSpan">(appInfo.baseDir, &#x27;run&#x27;)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.egg.egg">module egg.egg</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.egg.egg">
+            function <span class="apidocSignatureSpan">egg.</span>egg
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.egg.startCluster">module egg.startCluster</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.egg.startCluster.startCluster">
+            function <span class="apidocSignatureSpan">egg.</span>startCluster
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.egg" id="apidoc.module.egg">module egg</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.egg.egg" id="apidoc.element.egg.egg">
+        function <span class="apidocSignatureSpan"></span>egg
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class EggApplication extends EggCore {
+
+<span class="apidocCodeCommentSpan">  /**
+   * @constructor
+   * @param {Object} options
+   *  - {Object} [type] - type of instance, Agent and Application both extend koa, type can determine what it is.
+   *  - {String} [baseDir] - app root dir, default is `process.cwd()`
+   *  - {Object} [plugins] - custom plugin config, use it in unittest
+   */
+</span>  constructor(options) {
+    super(options);
+
+    // export context base classes, let framework can impl sub class and over context extend easily.
+    this.ContextCookies = ContextCookies;
+    this.ContextLogger = ContextLogger;
+    this.ContextHttpClient = ContextHttpClient;
+
+    this.loader.loadConfig();
+
+    /**
+     * messenger instance
+     * @member {Messenger}
+     * @since 1.0.0
+     */
+    this.messenger = new Messenger();
+
+    // dump config after ready, ensure all the modifications during start will be recorded
+    this.ready(() =&#x3e; this.dumpConfig());
+    this._setupTimeoutTimer();
+
+    this.console.info(&#x27;[egg:core] App root: %s&#x27;, this.baseDir);
+    this.console.info(&#x27;[egg:core] All *.log files save on %j&#x27;, this.config.logger.dir);
+    this.console.info(&#x27;[egg:core] Loaded enabled plugin %j&#x27;, this.loader.orderPlugins);
+
+    // Listen the error that promise had not catch, then log it in common-error
+    this._unhandledRejectionHandler = this._unhandledRejectionHandler.bind(this);
+    process.on(&#x27;unhandledRejection&#x27;, this._unhandledRejectionHandler);
+
+    this[CLUSTER_CLIENTS] = [];
+
+    /**
+     * Wrap the Client with Leader/Follower Pattern
+     *
+     * @description almost the same as Agent.cluster API, the only different is that this method create Follower.
+     *
+     * @see https://github.com/node-modules/cluster-client
+     * @param {Function} clientClass - client class function
+     * @param {Object} [options]
+     *   - {Boolean} [autoGenerate] - whether generate delegate rule automatically, default is true
+     *   - {Function} [formatKey] - a method to tranform the subscription info into a string，default is JSON.stringify
+     *   - {Object} [transcode|JSON.stringify/parse]
+     *     - {Function} encode - custom serialize method
+     *     - {Function} decode - custom deserialize method
+     *   - {Boolean} [isBroadcast] - whether broadcast subscrption result to all followers or just one, default is true
+     *   - {Number} [responseTimeout] - response timeout, default is 3 seconds
+     *   - {Number} [maxWaitTime|30000] - leader startup max time, default is 30 seconds
+     * @return {ClientWrapper} wrapper
+     */
+    this.cluster = (clientClass, options) =&#x3e; {
+      options = options || {};
+      // cluster need a port that can&#x27;t conflict on the environment
+      options.port = this._options.clusterPort;
+      // agent worker is leader, app workers are follower
+      options.isLeader = this.type === &#x27;agent&#x27;;
+      options.logger = this.coreLogger;
+      const client = cluster(clientClass, options);
+      this._patchClusterClient(client);
+      return client;
+    };
+
+    // register close function
+    this.beforeClose(() =&#x3e; {
+      for (const logger of this.loggers.values()) {
+        logger.close();
+      }
+      this.messenger.close();
+      process.removeListener(&#x27;unhandledRejection&#x27;, this._unhandledRejectionHandler);
+    });
+  }
+
+  /**
+   * print the infomation when console.log(app)
+   * @return {Object} inspected app.
+   * @since 1.0.0
+   * @example
+   * ```js
+   * console.log(app);
+   * =&#x3e;
+   * {
+   *   name: &#x27;mockapp&#x27;,
+   *   env: &#x27;test&#x27;,
+   *   subdomainOffset: 2,
+   *   config: &#x27;&#x3c;egg config&#x3e;&#x27;,
+   *   controller: &#x27;&#x3c;egg controller&#x3e;&#x27;,
+   *   service: &#x27;&#x3c;egg service&#x3e;&#x27;,
+   *   middlewares: &#x27;&#x3c;egg middlewares&#x3e;&#x27;,
+   *   urllib: &#x27;&#x3c;egg urllib&#x3e;&#x27;,
+   *   loggers: &#x27;&#x3c;egg loggers&#x3e;&#x27;
+   * }
+   * ```
+   */
+  inspect() {
+    const res = {
+      env: this.config.env,
+    };
+
+    function delegate(res, app, keys) {
+      for (const key of keys) {
+        /* istanbul ignore else */
+        if (app[key]) {
+          res[key] = app[key];
+        }
+      }
+    }
+
+    function abbr(res, app, keys) {
+      for (const key of keys) {
+        /* istanbul ignore else */ ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.egg.Agent" id="apidoc.element.egg.Agent">
+        function <span class="apidocSignatureSpan">egg.</span>Agent
+        <span class="apidocSignatureSpan">(options = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Agent extends EggApplication {
+<span class="apidocCodeCommentSpan">  /**
+   * @constructor
+   * @param {Object} options - see {@link EggApplication}
+   */
+</span>  constructor(options = {}) {
+    options.type = &#x27;agent&#x27;;
+    super(options);
+
+    this._wrapMessenger();
+
+    this.loader.load();
+
+    // dump config after loaded, ensure all the dynamic modifications will be recorded
+    this.dumpConfig();
+
+    // keep agent alive even it don&#x27;t have any io tasks
+    setInterval(() =&#x3e; {}, 24 * 60 * 60 * 1000);
+
+    this._uncaughtExceptionHandler = this._uncaughtExceptionHandler.bind(this);
+    process.on(&#x27;uncaughtException&#x27;, this._uncaughtExceptionHandler);
+  }
+
+  _uncaughtExceptionHandler(err) {
+    if (!(err instanceof Error)) {
+      err = new Error(String(err));
+    }
+    /* istanbul ignore else */
+    if (err.name === &#x27;Error&#x27;) {
+      err.name = &#x27;unhandledExceptionError&#x27;;
+    }
+    this.coreLogger.error(err);
+  }
+
+  get [EGG_LOADER]() {
+    return AgentWorkerLoader;
+  }
+
+  get [EGG_PATH]() {
+    return path.join(__dirname, &#x27;..&#x27;);
+  }
+
+  _wrapMessenger() {
+    for (const methodName of [ &#x27;broadcast&#x27;, &#x27;sendTo&#x27;, &#x27;sendToApp&#x27;, &#x27;sendToAgent&#x27;, &#x27;sendRandom&#x27; ]) {
+      wrapMethod(methodName, this.messenger, this.coreLogger);
+    }
+
+    function wrapMethod(methodName, messenger, logger) {
+      const originMethod = messenger[methodName];
+      messenger[methodName] = function() {
+        const stack = new Error().stack.split(&#x27;\n&#x27;).slice(1).join(&#x27;\n&#x27;);
+        logger.warn(&#x27;agent can\&#x27;t call %s before server started\n%s&#x27;,
+          methodName, stack);
+        originMethod.apply(this, arguments);
+      };
+      messenger.once(&#x27;egg-ready&#x27;, () =&#x3e; {
+        messenger[methodName] = originMethod;
+      });
+    }
+  }
+
+  close() {
+    process.removeListener(&#x27;uncaughtException&#x27;, this._uncaughtExceptionHandler);
+    return super.close();
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.egg.AgentWorkerLoader" id="apidoc.element.egg.AgentWorkerLoader">
+        function <span class="apidocSignatureSpan">egg.</span>AgentWorkerLoader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class AgentWorkerLoader extends EggLoader {
+
+<span class="apidocCodeCommentSpan">  /**
+   * loadPlugin first, then loadConfig
+   */
+</span>  loadConfig() {
+    super.loadPlugin();
+    super.loadConfig();
+  }
+
+  load() {
+    this.loadAgentExtend();
+    this.loadCustomAgent();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.egg.AppWorkerLoader" id="apidoc.element.egg.AppWorkerLoader">
+        function <span class="apidocSignatureSpan">egg.</span>AppWorkerLoader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class AppWorkerLoader extends EggLoader {
+
+<span class="apidocCodeCommentSpan">  /**
+   * loadPlugin first, then loadConfig
+   * @since 1.0.0
+   */
+</span>  loadConfig() {
+    super.loadPlugin();
+    super.loadConfig();
+  }
+
+  /**
+   * 开始加载所有约定目录
+   * @since 1.0.0
+   */
+  load() {
+    // app &#x3e; plugin &#x3e; core
+    this.loadApplicationExtend();
+    this.loadRequestExtend();
+    this.loadResponseExtend();
+    this.loadContextExtend();
+    this.loadHelperExtend();
+
+    // app &#x3e; plugin
+    this.loadCustomApp();
+    // app &#x3e; plugin
+    this.loadService();
+    // app &#x3e; plugin &#x3e; core
+    this.loadMiddleware();
+    // app
+    this.loadController();
+    // app
+    this.loadRouter(); // 依赖 controller
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.egg.Application" id="apidoc.element.egg.Application">
+        function <span class="apidocSignatureSpan">egg.</span>Application
+        <span class="apidocSignatureSpan">(options = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Application extends EggApplication {
+
+<span class="apidocCodeCommentSpan">  /**
+   * @constructor
+   * @param {Object} options - see {@link EggApplication}
+   */
+</span>  constructor(options = {}) {
+    options.type = &#x27;application&#x27;;
+    super(options);
+
+    try {
+      this.loader.load();
+    } catch (e) {
+      // close gracefully
+      this[CLUSTER_CLIENTS].forEach(cluster.close);
+      throw e;
+    }
+
+    // dump config after loaded, ensure all the dynamic modifications will be recorded
+    this.dumpConfig();
+    this.warnConfusedConfig();
+    this.bindEvents();
+  }
+
+  get [EGG_LOADER]() {
+    return AppWorkerLoader;
+  }
+
+  get [EGG_PATH]() {
+    return path.join(__dirname, &#x27;..&#x27;);
+  }
+
+  onServer(server) {
+    /* istanbul ignore next */
+    graceful({
+      server: [ server ],
+      error: (err, throwErrorCount) =&#x3e; {
+        if (err.message) {
+          err.message += &#x27; (uncaughtException throw &#x27; + throwErrorCount + &#x27; times on pid:&#x27; + process.pid + &#x27;)&#x27;;
+        }
+        this.coreLogger.error(err);
+      },
+    });
+  }
+
+  /**
+   * global locals for view
+   * @member {Object} Application#locals
+   * @see Context#locals
+   */
+  get locals() {
+    if (!this[LOCALS]) {
+      this[LOCALS] = {};
+    }
+    if (this[LOCALS_LIST] &#x26;&#x26; this[LOCALS_LIST].length) {
+      assign(this[LOCALS], this[LOCALS_LIST]);
+      this[LOCALS_LIST] = null;
+    }
+    return this[LOCALS];
+  }
+
+  set locals(val) {
+    if (!this[LOCALS_LIST]) {
+      this[LOCALS_LIST] = [];
+    }
+    this[LOCALS_LIST].push(val);
+  }
+
+  /**
+   * Create egg context
+   * @method Application#createContext
+   * @param  {Req} req - node native Request object
+   * @param  {Res} res - node native Response object
+   * @return {Context} context object
+   */
+  createContext(req, res) {
+    const app = this;
+    const context = Object.create(app.context);
+    const request = context.request = Object.create(app.request);
+    const response = context.response = Object.create(app.response);
+    context.app = request.app = response.app = app;
+    context.req = request.req = response.req = req;
+    context.res = request.res = response.res = res;
+    request.ctx = response.ctx = context;
+    request.response = response;
+    response.request = request;
+    context.onerror = context.onerror.bind(context);
+    context.originalUrl = request.originalUrl = req.url;
+
+    /**
+     * Request start time
+     * @member {Number} Context#starttime
+     */
+    context.starttime = Date.now();
+    return context;
+  }
+
+  /**
+   * Create an anonymouse context, the context isn&#x27;t request level, so the request is mocked.
+   * then you can use context level API like `ctx.service`
+   * @member {String} Application#createAnonymousContext
+   * @param {Request} req - if you want to mock request like querystring, you can pass an object to this function.
+   * @return {Context} context
+   */
+  createAnonymousContext(req) {
+    const request = {
+      headers: {
+        &#x27;x-forwarded-for&#x27;: &#x27;127.0.0.1&#x27;,
+      },
+      query: {},
+      querystring: &#x27;&#x27;,
+      host: &#x27;127.0.0.1&#x27;,
+      hostname: &#x27;127.0.0.1&#x27;,
+      protocol: &#x27;http&#x27;,
+      secure: &#x27;false&#x27;,
+      method: &#x27;GET&#x27;,
+      url: &#x27;/&#x27;,
+      path: &#x27;/&#x27;,
+      socket: {
+        remoteAddress: &#x27;127.0.0.1&#x27;,
+        remotePort: 7001,
+      },
+    };
+    if (req) {
+      for (const key in req) {
+        if (key === &#x27;headers&#x27; || key === &#x27;query&#x27; || key === &#x27;socket&#x27;) {
+          Object.assign(request[key], req[key]);
+        } else {
+          request[key] = req[key];
+        }
+      }
+    }
+    const response = new http.ServerResponse(request);
+    return this.createContext(request, response);
+  }
+
+  /**
+   * Run generator function in the background
+   * @see Context#runInBackground
+   * @param {Generator} scope - generator function, the first args is an anonymous ctx
+   */
+  runInBackground(scope) {
+    const ctx = this.createAnonymousContext();
+    ctx.runInBackground(scope);
+  }
+
+  /**
+   * secret key for Application
+   * @member {String} Application#keys
+   */
+  get keys() {
+    if (!this[KEYS]) {
+      if (!this.config.keys) {
+        if (this.config.env === &#x27;local&#x27; || this.config.env === &#x27;unittest&#x27;) { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.egg.Controller" id="apidoc.element.egg.Controller">
+        function <span class="apidocSignatureSpan">egg.</span>Controller
+        <span class="apidocSignatureSpan">(ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class BaseContextClass {
+
+<span class="apidocCodeCommentSpan">  /**
+   * @constructor
+   * @param {Context} ctx - context instance
+   * @since 1.0.0
+   */
+</span>  constructor(ctx) {
+    /**
+     * @member {Context} BaseContextClass#ctx
+     * @since 1.0.0
+     */
+    this.ctx = ctx;
+    /**
+     * @member {Application} BaseContextClass#app
+     * @since 1.0.0
+     */
+    this.app = ctx.app;
+    /**
+     * @member {Config} BaseContextClass#config
+     * @since 1.0.0
+     */
+    this.config = ctx.app.config;
+    /**
+     * @member {Service} BaseContextClass#service
+     * @since 1.0.0
+     */
+    this.service = ctx.service;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.egg.Service" id="apidoc.element.egg.Service">
+        function <span class="apidocSignatureSpan">egg.</span>Service
+        <span class="apidocSignatureSpan">(ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class BaseContextClass {
+
+<span class="apidocCodeCommentSpan">  /**
+   * @constructor
+   * @param {Context} ctx - context instance
+   * @since 1.0.0
+   */
+</span>  constructor(ctx) {
+    /**
+     * @member {Context} BaseContextClass#ctx
+     * @since 1.0.0
+     */
+    this.ctx = ctx;
+    /**
+     * @member {Application} BaseContextClass#app
+     * @since 1.0.0
+     */
+    this.app = ctx.app;
+    /**
+     * @member {Config} BaseContextClass#config
+     * @since 1.0.0
+     */
+    this.config = ctx.app.config;
+    /**
+     * @member {Service} BaseContextClass#service
+     * @since 1.0.0
+     */
+    this.service = ctx.service;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.egg.config_default" id="apidoc.element.egg.config_default">
+        function <span class="apidocSignatureSpan">egg.</span>config_default
+        <span class="apidocSignatureSpan">(appInfo.baseDir, &#x27;run&#x27;)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">appInfo =&#x3e; {
+
+  const config = {
+
+<span class="apidocCodeCommentSpan">    /**
+     * The environment of egg
+     * @member {String} Config#env
+     * @see {appInfo#env}
+     * @since 1.0.0
+     */
+</span>    env: appInfo.env,
+
+    /**
+     * The name of the application
+     * @member {String} Config#name
+     * @see {appInfo#name}
+     * @since 1.0.0
+     */
+    name: appInfo.name,
+
+    /**
+     * The key that signing cookies. It can contain multiple keys seperated by `,`.
+     * @member {String} Config#keys
+     * @see https://eggjs.org/zh-cn/basics/controller.html#cookie-秘钥
+     * @default
+     * @since 1.0.0
+     */
+    keys: &#x27;&#x27;,
+
+    /**
+     * Whether application deployed after a reverse proxy,
+     * when true proxy header fields will be trusted
+     * @member {Boolean} Config#proxy
+     * @default
+     * @since 1.0.0
+     */
+    proxy: false,
+
+    /**
+     * Detect request&#x27;s protocol from specified headers, not case-sensitive.
+     * Only worked when config.proxy set to true.
+     * @member {String} Config#protocolHeaders
+     * @default
+     * @since 1.0.0
+     */
+    protocolHeaders: &#x27;x-forwarded-proto&#x27;,
+
+    /**
+     * Detect request&#x27; ip from specified headers, not case-sensitive.
+     * Only worked when config.proxy set to true.
+     * @member {String} Config#ipHeaders
+     * @default
+     * @since 1.0.0
+     */
+    ipHeaders: &#x27;x-forwarded-for&#x27;,
+
+    /**
+     * Detect request&#x27; host from specified headers, not case-sensitive.
+     * Only worked when config.proxy set to true.
+     * @member {String} Config#hostHeaders
+     * @default
+     * @since 1.0.0
+     */
+    hostHeaders: &#x27;x-forwarded-host&#x27;,
+
+    /**
+     * package.json
+     * @member {Object} Config#pkg
+     * @see {appInfo#pkg}
+     * @since 1.0.0
+     */
+    pkg: appInfo.pkg,
+
+    /**
+     * The current directory of the application
+     * @member {String} Config#baseDir
+     * @see {appInfo#baseDir}
+     * @since 1.0.0
+     */
+    baseDir: appInfo.baseDir,
+
+    /**
+     * The current HOME directory
+     * @member {String} Config#HOME
+     * @see {appInfo#HOME}
+     * @since 1.0.0
+     */
+    HOME: appInfo.HOME,
+
+    /**
+     * The directory of server running. You can find `application_config.json` under it that is dumpped from `app.config`.
+     * @member {String} Config#rundir
+     * @default
+     * @since 1.0.0
+     */
+    rundir: path.join(appInfo.baseDir, &#x27;run&#x27;),
+
+    /**
+     * dump config
+     *
+     * It will ignore special keys when dumpConfig
+     *
+     * @member Config#dump
+     * @property {Set} ignore - keys to ignore
+     */
+    dump: {
+      ignore: new Set([ &#x27;pass&#x27;, &#x27;pwd&#x27;, &#x27;passd&#x27;, &#x27;passwd&#x27;, &#x27;password&#x27;, &#x27;keys&#x27;, &#x27;secret&#x27; ]),
+    },
+
+    /**
+     * configurations are confused to users
+     * {
+     *   [unexpectedKey]: [expectedKey],
+     * }
+     * @member Config#confusedConfigurations
+     * @type {Object}
+     */
+    confusedConfigurations: {
+      bodyparser: &#x27;bodyParser&#x27;,
+      notFound: &#x27;notfound&#x27;,
+      sitefile: &#x27;siteFile&#x27;,
+      middlewares: &#x27;middleware&#x27;,
+      httpClient: &#x27;httpclient&#x27;,
+    },
+  };
+
+  /**
+   * The option of `notfound` middleware
+   *
+   * It will return page or json depend on negotiation when 404,
+   * If pageUrl is set, it will redirect to the page.
+   *
+   * @member Config#notfound
+   * @property {String} pageUrl - the 404 page url
+   */
+  config.notfound = {
+    pageUrl: &#x27;&#x27;,
+  };
+
+  /**
+   * The option of `siteFile` middleware
+   *
+   * You can map some files using this options, it will response immdiately when matching.
+   *
+   * @member {Object} Config#siteFile - key is path, and value is url or buffer.
+   * @example
+   * // 指定应用 favicon, =&#x3e; &#x27;/favicon.ico&#x27;: &#x27;https://eggjs.org/favicon.ico&#x27;,
+   * config.siteFile = {
+   *   &#x27;/favicon.ico&#x27;: &#x27;https://eggjs.org/favicon.ico&#x27;,
+   * };
+   */
+  config.siteFile = {
+    &#x27;/favicon.ico&#x27;: fs.readFileSync(path.join(__dirname, &#x27;favicon.png&#x27;)),
+  };
+
+  /**
+   * The option of `bodyParser` middleware
+   *
+   * @member Config#bodyParser
+   * @property {Boolean} enable - enable bodyParser or not, default to true
+   * @property {String | RegExp | Function | Array} ignore - won&#x27;t parse request body when url path hit ignore p ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.egg.startCluster" id="apidoc.element.egg.startCluster">
+        function <span class="apidocSignatureSpan">egg.</span>startCluster
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startCluster = function (options, callback) {
+  new Master(options).ready(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.egg.Agent" id="apidoc.module.egg.Agent">module egg.Agent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.egg.Agent.Agent" id="apidoc.element.egg.Agent.Agent">
+        function <span class="apidocSignatureSpan">egg.</span>Agent
+        <span class="apidocSignatureSpan">(options = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Agent extends EggApplication {
+<span class="apidocCodeCommentSpan">  /**
+   * @constructor
+   * @param {Object} options - see {@link EggApplication}
+   */
+</span>  constructor(options = {}) {
+    options.type = &#x27;agent&#x27;;
+    super(options);
+
+    this._wrapMessenger();
+
+    this.loader.load();
+
+    // dump config after loaded, ensure all the dynamic modifications will be recorded
+    this.dumpConfig();
+
+    // keep agent alive even it don&#x27;t have any io tasks
+    setInterval(() =&#x3e; {}, 24 * 60 * 60 * 1000);
+
+    this._uncaughtExceptionHandler = this._uncaughtExceptionHandler.bind(this);
+    process.on(&#x27;uncaughtException&#x27;, this._uncaughtExceptionHandler);
+  }
+
+  _uncaughtExceptionHandler(err) {
+    if (!(err instanceof Error)) {
+      err = new Error(String(err));
+    }
+    /* istanbul ignore else */
+    if (err.name === &#x27;Error&#x27;) {
+      err.name = &#x27;unhandledExceptionError&#x27;;
+    }
+    this.coreLogger.error(err);
+  }
+
+  get [EGG_LOADER]() {
+    return AgentWorkerLoader;
+  }
+
+  get [EGG_PATH]() {
+    return path.join(__dirname, &#x27;..&#x27;);
+  }
+
+  _wrapMessenger() {
+    for (const methodName of [ &#x27;broadcast&#x27;, &#x27;sendTo&#x27;, &#x27;sendToApp&#x27;, &#x27;sendToAgent&#x27;, &#x27;sendRandom&#x27; ]) {
+      wrapMethod(methodName, this.messenger, this.coreLogger);
+    }
+
+    function wrapMethod(methodName, messenger, logger) {
+      const originMethod = messenger[methodName];
+      messenger[methodName] = function() {
+        const stack = new Error().stack.split(&#x27;\n&#x27;).slice(1).join(&#x27;\n&#x27;);
+        logger.warn(&#x27;agent can\&#x27;t call %s before server started\n%s&#x27;,
+          methodName, stack);
+        originMethod.apply(this, arguments);
+      };
+      messenger.once(&#x27;egg-ready&#x27;, () =&#x3e; {
+        messenger[methodName] = originMethod;
+      });
+    }
+  }
+
+  close() {
+    process.removeListener(&#x27;uncaughtException&#x27;, this._uncaughtExceptionHandler);
+    return super.close();
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.egg.AgentWorkerLoader" id="apidoc.module.egg.AgentWorkerLoader">module egg.AgentWorkerLoader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.egg.AgentWorkerLoader.AgentWorkerLoader" id="apidoc.element.egg.AgentWorkerLoader.AgentWorkerLoader">
+        function <span class="apidocSignatureSpan">egg.</span>AgentWorkerLoader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class AgentWorkerLoader extends EggLoader {
+
+<span class="apidocCodeCommentSpan">  /**
+   * loadPlugin first, then loadConfig
+   */
+</span>  loadConfig() {
+    super.loadPlugin();
+    super.loadConfig();
+  }
+
+  load() {
+    this.loadAgentExtend();
+    this.loadCustomAgent();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.egg.AppWorkerLoader" id="apidoc.module.egg.AppWorkerLoader">module egg.AppWorkerLoader</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.egg.AppWorkerLoader.AppWorkerLoader" id="apidoc.element.egg.AppWorkerLoader.AppWorkerLoader">
+        function <span class="apidocSignatureSpan">egg.</span>AppWorkerLoader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class AppWorkerLoader extends EggLoader {
+
+<span class="apidocCodeCommentSpan">  /**
+   * loadPlugin first, then loadConfig
+   * @since 1.0.0
+   */
+</span>  loadConfig() {
+    super.loadPlugin();
+    super.loadConfig();
+  }
+
+  /**
+   * 开始加载所有约定目录
+   * @since 1.0.0
+   */
+  load() {
+    // app &#x3e; plugin &#x3e; core
+    this.loadApplicationExtend();
+    this.loadRequestExtend();
+    this.loadResponseExtend();
+    this.loadContextExtend();
+    this.loadHelperExtend();
+
+    // app &#x3e; plugin
+    this.loadCustomApp();
+    // app &#x3e; plugin
+    this.loadService();
+    // app &#x3e; plugin &#x3e; core
+    this.loadMiddleware();
+    // app
+    this.loadController();
+    // app
+    this.loadRouter(); // 依赖 controller
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.egg.Application" id="apidoc.module.egg.Application">module egg.Application</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.egg.Application.Application" id="apidoc.element.egg.Application.Application">
+        function <span class="apidocSignatureSpan">egg.</span>Application
+        <span class="apidocSignatureSpan">(options = {})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class Application extends EggApplication {
+
+<span class="apidocCodeCommentSpan">  /**
+   * @constructor
+   * @param {Object} options - see {@link EggApplication}
+   */
+</span>  constructor(options = {}) {
+    options.type = &#x27;application&#x27;;
+    super(options);
+
+    try {
+      this.loader.load();
+    } catch (e) {
+      // close gracefully
+      this[CLUSTER_CLIENTS].forEach(cluster.close);
+      throw e;
+    }
+
+    // dump config after loaded, ensure all the dynamic modifications will be recorded
+    this.dumpConfig();
+    this.warnConfusedConfig();
+    this.bindEvents();
+  }
+
+  get [EGG_LOADER]() {
+    return AppWorkerLoader;
+  }
+
+  get [EGG_PATH]() {
+    return path.join(__dirname, &#x27;..&#x27;);
+  }
+
+  onServer(server) {
+    /* istanbul ignore next */
+    graceful({
+      server: [ server ],
+      error: (err, throwErrorCount) =&#x3e; {
+        if (err.message) {
+          err.message += &#x27; (uncaughtException throw &#x27; + throwErrorCount + &#x27; times on pid:&#x27; + process.pid + &#x27;)&#x27;;
+        }
+        this.coreLogger.error(err);
+      },
+    });
+  }
+
+  /**
+   * global locals for view
+   * @member {Object} Application#locals
+   * @see Context#locals
+   */
+  get locals() {
+    if (!this[LOCALS]) {
+      this[LOCALS] = {};
+    }
+    if (this[LOCALS_LIST] &#x26;&#x26; this[LOCALS_LIST].length) {
+      assign(this[LOCALS], this[LOCALS_LIST]);
+      this[LOCALS_LIST] = null;
+    }
+    return this[LOCALS];
+  }
+
+  set locals(val) {
+    if (!this[LOCALS_LIST]) {
+      this[LOCALS_LIST] = [];
+    }
+    this[LOCALS_LIST].push(val);
+  }
+
+  /**
+   * Create egg context
+   * @method Application#createContext
+   * @param  {Req} req - node native Request object
+   * @param  {Res} res - node native Response object
+   * @return {Context} context object
+   */
+  createContext(req, res) {
+    const app = this;
+    const context = Object.create(app.context);
+    const request = context.request = Object.create(app.request);
+    const response = context.response = Object.create(app.response);
+    context.app = request.app = response.app = app;
+    context.req = request.req = response.req = req;
+    context.res = request.res = response.res = res;
+    request.ctx = response.ctx = context;
+    request.response = response;
+    response.request = request;
+    context.onerror = context.onerror.bind(context);
+    context.originalUrl = request.originalUrl = req.url;
+
+    /**
+     * Request start time
+     * @member {Number} Context#starttime
+     */
+    context.starttime = Date.now();
+    return context;
+  }
+
+  /**
+   * Create an anonymouse context, the context isn&#x27;t request level, so the request is mocked.
+   * then you can use context level API like `ctx.service`
+   * @member {String} Application#createAnonymousContext
+   * @param {Request} req - if you want to mock request like querystring, you can pass an object to this function.
+   * @return {Context} context
+   */
+  createAnonymousContext(req) {
+    const request = {
+      headers: {
+        &#x27;x-forwarded-for&#x27;: &#x27;127.0.0.1&#x27;,
+      },
+      query: {},
+      querystring: &#x27;&#x27;,
+      host: &#x27;127.0.0.1&#x27;,
+      hostname: &#x27;127.0.0.1&#x27;,
+      protocol: &#x27;http&#x27;,
+      secure: &#x27;false&#x27;,
+      method: &#x27;GET&#x27;,
+      url: &#x27;/&#x27;,
+      path: &#x27;/&#x27;,
+      socket: {
+        remoteAddress: &#x27;127.0.0.1&#x27;,
+        remotePort: 7001,
+      },
+    };
+    if (req) {
+      for (const key in req) {
+        if (key === &#x27;headers&#x27; || key === &#x27;query&#x27; || key === &#x27;socket&#x27;) {
+          Object.assign(request[key], req[key]);
+        } else {
+          request[key] = req[key];
+        }
+      }
+    }
+    const response = new http.ServerResponse(request);
+    return this.createContext(request, response);
+  }
+
+  /**
+   * Run generator function in the background
+   * @see Context#runInBackground
+   * @param {Generator} scope - generator function, the first args is an anonymous ctx
+   */
+  runInBackground(scope) {
+    const ctx = this.createAnonymousContext();
+    ctx.runInBackground(scope);
+  }
+
+  /**
+   * secret key for Application
+   * @member {String} Application#keys
+   */
+  get keys() {
+    if (!this[KEYS]) {
+      if (!this.config.keys) {
+        if (this.config.env === &#x27;local&#x27; || this.config.env === &#x27;unittest&#x27;) { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.egg.Controller" id="apidoc.module.egg.Controller">module egg.Controller</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.egg.Controller.Controller" id="apidoc.element.egg.Controller.Controller">
+        function <span class="apidocSignatureSpan">egg.</span>Controller
+        <span class="apidocSignatureSpan">(ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class BaseContextClass {
+
+<span class="apidocCodeCommentSpan">  /**
+   * @constructor
+   * @param {Context} ctx - context instance
+   * @since 1.0.0
+   */
+</span>  constructor(ctx) {
+    /**
+     * @member {Context} BaseContextClass#ctx
+     * @since 1.0.0
+     */
+    this.ctx = ctx;
+    /**
+     * @member {Application} BaseContextClass#app
+     * @since 1.0.0
+     */
+    this.app = ctx.app;
+    /**
+     * @member {Config} BaseContextClass#config
+     * @since 1.0.0
+     */
+    this.config = ctx.app.config;
+    /**
+     * @member {Service} BaseContextClass#service
+     * @since 1.0.0
+     */
+    this.service = ctx.service;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.egg.config_default" id="apidoc.module.egg.config_default">module egg.config_default</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.egg.config_default.config_default" id="apidoc.element.egg.config_default.config_default">
+        function <span class="apidocSignatureSpan">egg.</span>config_default
+        <span class="apidocSignatureSpan">(appInfo.baseDir, &#x27;run&#x27;)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">appInfo =&#x3e; {
+
+  const config = {
+
+<span class="apidocCodeCommentSpan">    /**
+     * The environment of egg
+     * @member {String} Config#env
+     * @see {appInfo#env}
+     * @since 1.0.0
+     */
+</span>    env: appInfo.env,
+
+    /**
+     * The name of the application
+     * @member {String} Config#name
+     * @see {appInfo#name}
+     * @since 1.0.0
+     */
+    name: appInfo.name,
+
+    /**
+     * The key that signing cookies. It can contain multiple keys seperated by `,`.
+     * @member {String} Config#keys
+     * @see https://eggjs.org/zh-cn/basics/controller.html#cookie-秘钥
+     * @default
+     * @since 1.0.0
+     */
+    keys: &#x27;&#x27;,
+
+    /**
+     * Whether application deployed after a reverse proxy,
+     * when true proxy header fields will be trusted
+     * @member {Boolean} Config#proxy
+     * @default
+     * @since 1.0.0
+     */
+    proxy: false,
+
+    /**
+     * Detect request&#x27;s protocol from specified headers, not case-sensitive.
+     * Only worked when config.proxy set to true.
+     * @member {String} Config#protocolHeaders
+     * @default
+     * @since 1.0.0
+     */
+    protocolHeaders: &#x27;x-forwarded-proto&#x27;,
+
+    /**
+     * Detect request&#x27; ip from specified headers, not case-sensitive.
+     * Only worked when config.proxy set to true.
+     * @member {String} Config#ipHeaders
+     * @default
+     * @since 1.0.0
+     */
+    ipHeaders: &#x27;x-forwarded-for&#x27;,
+
+    /**
+     * Detect request&#x27; host from specified headers, not case-sensitive.
+     * Only worked when config.proxy set to true.
+     * @member {String} Config#hostHeaders
+     * @default
+     * @since 1.0.0
+     */
+    hostHeaders: &#x27;x-forwarded-host&#x27;,
+
+    /**
+     * package.json
+     * @member {Object} Config#pkg
+     * @see {appInfo#pkg}
+     * @since 1.0.0
+     */
+    pkg: appInfo.pkg,
+
+    /**
+     * The current directory of the application
+     * @member {String} Config#baseDir
+     * @see {appInfo#baseDir}
+     * @since 1.0.0
+     */
+    baseDir: appInfo.baseDir,
+
+    /**
+     * The current HOME directory
+     * @member {String} Config#HOME
+     * @see {appInfo#HOME}
+     * @since 1.0.0
+     */
+    HOME: appInfo.HOME,
+
+    /**
+     * The directory of server running. You can find `application_config.json` under it that is dumpped from `app.config`.
+     * @member {String} Config#rundir
+     * @default
+     * @since 1.0.0
+     */
+    rundir: path.join(appInfo.baseDir, &#x27;run&#x27;),
+
+    /**
+     * dump config
+     *
+     * It will ignore special keys when dumpConfig
+     *
+     * @member Config#dump
+     * @property {Set} ignore - keys to ignore
+     */
+    dump: {
+      ignore: new Set([ &#x27;pass&#x27;, &#x27;pwd&#x27;, &#x27;passd&#x27;, &#x27;passwd&#x27;, &#x27;password&#x27;, &#x27;keys&#x27;, &#x27;secret&#x27; ]),
+    },
+
+    /**
+     * configurations are confused to users
+     * {
+     *   [unexpectedKey]: [expectedKey],
+     * }
+     * @member Config#confusedConfigurations
+     * @type {Object}
+     */
+    confusedConfigurations: {
+      bodyparser: &#x27;bodyParser&#x27;,
+      notFound: &#x27;notfound&#x27;,
+      sitefile: &#x27;siteFile&#x27;,
+      middlewares: &#x27;middleware&#x27;,
+      httpClient: &#x27;httpclient&#x27;,
+    },
+  };
+
+  /**
+   * The option of `notfound` middleware
+   *
+   * It will return page or json depend on negotiation when 404,
+   * If pageUrl is set, it will redirect to the page.
+   *
+   * @member Config#notfound
+   * @property {String} pageUrl - the 404 page url
+   */
+  config.notfound = {
+    pageUrl: &#x27;&#x27;,
+  };
+
+  /**
+   * The option of `siteFile` middleware
+   *
+   * You can map some files using this options, it will response immdiately when matching.
+   *
+   * @member {Object} Config#siteFile - key is path, and value is url or buffer.
+   * @example
+   * // 指定应用 favicon, =&#x3e; &#x27;/favicon.ico&#x27;: &#x27;https://eggjs.org/favicon.ico&#x27;,
+   * config.siteFile = {
+   *   &#x27;/favicon.ico&#x27;: &#x27;https://eggjs.org/favicon.ico&#x27;,
+   * };
+   */
+  config.siteFile = {
+    &#x27;/favicon.ico&#x27;: fs.readFileSync(path.join(__dirname, &#x27;favicon.png&#x27;)),
+  };
+
+  /**
+   * The option of `bodyParser` middleware
+   *
+   * @member Config#bodyParser
+   * @property {Boolean} enable - enable bodyParser or not, default to true
+   * @property {String | RegExp | Function | Array} ignore - won&#x27;t parse request body when url path hit ignore p ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.egg.egg" id="apidoc.module.egg.egg">module egg.egg</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.egg.egg.egg" id="apidoc.element.egg.egg.egg">
+        function <span class="apidocSignatureSpan">egg.</span>egg
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class EggApplication extends EggCore {
+
+<span class="apidocCodeCommentSpan">  /**
+   * @constructor
+   * @param {Object} options
+   *  - {Object} [type] - type of instance, Agent and Application both extend koa, type can determine what it is.
+   *  - {String} [baseDir] - app root dir, default is `process.cwd()`
+   *  - {Object} [plugins] - custom plugin config, use it in unittest
+   */
+</span>  constructor(options) {
+    super(options);
+
+    // export context base classes, let framework can impl sub class and over context extend easily.
+    this.ContextCookies = ContextCookies;
+    this.ContextLogger = ContextLogger;
+    this.ContextHttpClient = ContextHttpClient;
+
+    this.loader.loadConfig();
+
+    /**
+     * messenger instance
+     * @member {Messenger}
+     * @since 1.0.0
+     */
+    this.messenger = new Messenger();
+
+    // dump config after ready, ensure all the modifications during start will be recorded
+    this.ready(() =&#x3e; this.dumpConfig());
+    this._setupTimeoutTimer();
+
+    this.console.info(&#x27;[egg:core] App root: %s&#x27;, this.baseDir);
+    this.console.info(&#x27;[egg:core] All *.log files save on %j&#x27;, this.config.logger.dir);
+    this.console.info(&#x27;[egg:core] Loaded enabled plugin %j&#x27;, this.loader.orderPlugins);
+
+    // Listen the error that promise had not catch, then log it in common-error
+    this._unhandledRejectionHandler = this._unhandledRejectionHandler.bind(this);
+    process.on(&#x27;unhandledRejection&#x27;, this._unhandledRejectionHandler);
+
+    this[CLUSTER_CLIENTS] = [];
+
+    /**
+     * Wrap the Client with Leader/Follower Pattern
+     *
+     * @description almost the same as Agent.cluster API, the only different is that this method create Follower.
+     *
+     * @see https://github.com/node-modules/cluster-client
+     * @param {Function} clientClass - client class function
+     * @param {Object} [options]
+     *   - {Boolean} [autoGenerate] - whether generate delegate rule automatically, default is true
+     *   - {Function} [formatKey] - a method to tranform the subscription info into a string，default is JSON.stringify
+     *   - {Object} [transcode|JSON.stringify/parse]
+     *     - {Function} encode - custom serialize method
+     *     - {Function} decode - custom deserialize method
+     *   - {Boolean} [isBroadcast] - whether broadcast subscrption result to all followers or just one, default is true
+     *   - {Number} [responseTimeout] - response timeout, default is 3 seconds
+     *   - {Number} [maxWaitTime|30000] - leader startup max time, default is 30 seconds
+     * @return {ClientWrapper} wrapper
+     */
+    this.cluster = (clientClass, options) =&#x3e; {
+      options = options || {};
+      // cluster need a port that can&#x27;t conflict on the environment
+      options.port = this._options.clusterPort;
+      // agent worker is leader, app workers are follower
+      options.isLeader = this.type === &#x27;agent&#x27;;
+      options.logger = this.coreLogger;
+      const client = cluster(clientClass, options);
+      this._patchClusterClient(client);
+      return client;
+    };
+
+    // register close function
+    this.beforeClose(() =&#x3e; {
+      for (const logger of this.loggers.values()) {
+        logger.close();
+      }
+      this.messenger.close();
+      process.removeListener(&#x27;unhandledRejection&#x27;, this._unhandledRejectionHandler);
+    });
+  }
+
+  /**
+   * print the infomation when console.log(app)
+   * @return {Object} inspected app.
+   * @since 1.0.0
+   * @example
+   * ```js
+   * console.log(app);
+   * =&#x3e;
+   * {
+   *   name: &#x27;mockapp&#x27;,
+   *   env: &#x27;test&#x27;,
+   *   subdomainOffset: 2,
+   *   config: &#x27;&#x3c;egg config&#x3e;&#x27;,
+   *   controller: &#x27;&#x3c;egg controller&#x3e;&#x27;,
+   *   service: &#x27;&#x3c;egg service&#x3e;&#x27;,
+   *   middlewares: &#x27;&#x3c;egg middlewares&#x3e;&#x27;,
+   *   urllib: &#x27;&#x3c;egg urllib&#x3e;&#x27;,
+   *   loggers: &#x27;&#x3c;egg loggers&#x3e;&#x27;
+   * }
+   * ```
+   */
+  inspect() {
+    const res = {
+      env: this.config.env,
+    };
+
+    function delegate(res, app, keys) {
+      for (const key of keys) {
+        /* istanbul ignore else */
+        if (app[key]) {
+          res[key] = app[key];
+        }
+      }
+    }
+
+    function abbr(res, app, keys) {
+      for (const key of keys) {
+        /* istanbul ignore else */ ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.egg.startCluster" id="apidoc.module.egg.startCluster">module egg.startCluster</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.egg.startCluster.startCluster" id="apidoc.element.egg.startCluster.startCluster">
+        function <span class="apidocSignatureSpan">egg.</span>startCluster
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startCluster = function (options, callback) {
+  new Master(options).ready(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
