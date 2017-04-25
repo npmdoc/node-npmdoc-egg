@@ -1,4 +1,7 @@
-# api documentation for  [egg (v1.1.0)](https://github.com/eggjs/egg)  [![npm package](https://img.shields.io/npm/v/npmdoc-egg.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-egg) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-egg.svg)](https://travis-ci.org/npmdoc/node-npmdoc-egg)
+# npmdoc-egg
+
+#### basic api documentation for  [egg (v1.1.0)](https://github.com/eggjs/egg)  [![npm package](https://img.shields.io/npm/v/npmdoc-egg.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-egg) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-egg.svg)](https://travis-ci.org/npmdoc/node-npmdoc-egg)
+
 #### A web framework's framework for Node.js
 
 [![NPM](https://nodei.co/npm/egg.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/egg)
@@ -156,7 +159,8 @@
         "test": "npm run lint -- --fix && npm run test-local",
         "test-local": "egg-bin test"
     },
-    "version": "1.1.0"
+    "version": "1.1.0",
+    "bin": {}
 }
 ```
 
